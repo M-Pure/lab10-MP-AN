@@ -4,29 +4,36 @@ calculator.py
 
 One function per operation, in order.
 """
-# First example
+
 import math
 
 def add(a, b):
     return a + b
 
+
 def sub(a, b):
     return a - b
+
 
 def mul(a, b):
     return a * b
 
+
 def div(a, b):
-    if b == 0:
-        raise ZeroDivisionError("Division by zero is not allowed.")
-    return a / b
+    if a == 0:
+        raise ZeroDivisionError("Denominator is zero")
+    return b / a
+
 
 def log(a, b):
-    if a <= 0 or b <= 0:
-        raise ValueError("Logarithm inputs must be positive numbers.")
+    if b <= 0:
+        raise ValueError("Undefined logarithm")
+    if a <= 0 or a == 1:
+        raise ValueError("Invalid logarithm base")
     return math.log(b, a)
 
 def exp(a, b):
     return a ** b
+
 
 
