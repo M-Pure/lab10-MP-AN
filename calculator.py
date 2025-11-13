@@ -1,3 +1,4 @@
+#https://github.com/M-Pure/lab10-MP-AN.git
 """
 calculator.py
 - Defines functions used to create a simple calculator
@@ -27,7 +28,7 @@ def add(a, b):
     return a + b
 
 
-def sub(a, b):
+def subtract(a, b):
     return a - b
 
 
@@ -39,7 +40,7 @@ def div(a, b):
         raise ZeroDivisionError("Denominator is zero")
     return b / a
 
-def log(a, b):
+def logarithm(a, b):
     if b <= 0:
         raise ValueError("Undefined logarithm")
     if a <= 0 or a == 1:
