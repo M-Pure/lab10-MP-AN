@@ -6,15 +6,18 @@ calculator.py
 One function per operation, in order.
 """
 
+# https://github.com/M-Pure/lab10-MP-AN.git
+# Partner 1: Maddex Pure
+# Partner 2: Alfred Navarro
+
 import math
 
 def square_root(a):
     try:
-        if a < 0:
-            raise ValueError("Error: Negative Square Root")
-        return math.sqrt(a)
+        sqrt = math.sqrt(a)
+        return sqrt
     except Exception as e:
-        print(str(e))
+        raise ValueError("Error: Negative Square Root")
 
 def hypotenuse(a, b):
     try:
